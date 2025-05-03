@@ -1,7 +1,7 @@
 import requests
 import pytest
 
-AGENT_URL = "http://localhost:8001/chat"
+AGENT_URL = "http://routing_service_agent:8001/chat"
 
 
 def test_rag():
