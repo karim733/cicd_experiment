@@ -24,6 +24,8 @@ services:
       - ../secrets:/secrets
     ports:
       - "8001:8001"
+      - "0.0.0.0:8001:8001"  # Ensures it's accessible to the runner
+
     networks:
       - router-test-network
 
