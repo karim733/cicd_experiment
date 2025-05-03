@@ -27,12 +27,8 @@ jobs:
     - name: List running containers
       run: docker ps -a
 
-    - name: Run integration tests inside Docker
-      run: docker run --network=router-test-network -v $(pwd):/app -w /app python:3.9 bash -c "pip install pipenv && pipenv install && pipenv run pytest tests/integration"
-
-
-    #- name: Run integration tests
-    #  run: pipenv run pytest tests/integration
+    - name: Run integration tests
+      run: pipenv run pytest tests/integration
 
     - name: Tear down services
       if: always()
