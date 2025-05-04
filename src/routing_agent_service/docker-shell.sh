@@ -11,4 +11,4 @@ export SECRETS_DIR=$(pwd)/../secrets/
 docker build -t $IMAGE_NAME -f Dockerfile .
 
 # Run the container
-docker run --rm --name $IMAGE_NAME -ti -p 8001:8001 -v "$SECRETS_DIR":/secrets $IMAGE_NAME
+docker run --rm --name $IMAGE_NAME -ti -p 8001:8001 $IMAGE_NAME
