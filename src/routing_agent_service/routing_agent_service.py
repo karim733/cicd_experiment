@@ -19,7 +19,8 @@ import uvicorn
 import argparse
 
 from dotenv import load_dotenv
-_ = load_dotenv('../secrets/.env')
+#_ = load_dotenv('../secrets/.env')
+os.environ('GOOGLE_API_KEY')="AIzaSyBkwtS_qq_h0QgCBOzGtsp4JbFQXI9mgDE"
 
 global_config = {}
 
